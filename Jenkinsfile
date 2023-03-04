@@ -1,7 +1,3 @@
-# Create Scripted Pipeline For OpenMRS:
----------------------------------------
-
----
 node('OPENMRS') {
     stage('VCS') {
         git url: 'https://github.com/Shoaib-23/openmrs-core.git',
@@ -11,4 +7,3 @@ node('OPENMRS') {
         sh 'mvn package'
     }
 }
----
