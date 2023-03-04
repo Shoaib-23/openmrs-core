@@ -4,6 +4,7 @@ node('OPENMRS') {
             branch: 'scripted'    
     }
     stage('BUILD') {
-        sh 'mvn clean package'
+        def mvnTool = tool 'MAVEN-3.9.0'
+        sh "${mvnTool}/bin/mvn clean install"
     }
 }
