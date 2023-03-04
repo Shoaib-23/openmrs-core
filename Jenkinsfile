@@ -1,7 +1,3 @@
-# Create Declarative Pipeline For OpenMRS:
-------------------------------------------
-
----
 pipeline {
     agent { label 'OPENMRS' }
     stages {
@@ -13,7 +9,7 @@ pipeline {
         }   
         stage('build') {
             steps {
-                sh 'mvn package'
+                sh 'mvn clean package'
             }
         }
     }
