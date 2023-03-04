@@ -4,6 +4,6 @@ node('OPENMRS') {
             branch: 'scripted'    
     }
     stage('BUILD') {
-        sh 'mvn package'
+        sh './mvnw package'
     }
 }
