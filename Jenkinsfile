@@ -1,5 +1,7 @@
 pipeline {
     agent { label 'OPENMRS' }
+	tools {
+        maven "MAVEN-3.9.0"
     stages {
         stage('git clone') {
             steps {
